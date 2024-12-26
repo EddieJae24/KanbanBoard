@@ -39,8 +39,17 @@ export function UserFactory(sequelize: Sequelize): typeof User {
       password: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          notNull: {
+            msg: 'Please enter a password',
+          },
+          len: {
+            args:[8, 20],
+            msg: 'Password must be between 8 and 20 characters long',
+        },
       },
     },
+  },
     {
       tableName: 'users',
       sequelize,
@@ -49,7 +58,8 @@ export function UserFactory(sequelize: Sequelize): typeof User {
           await user.setPassword(user.password);
         },
         beforeUpdate: async (user: User) => {
-          await user.setPassword(user.password);
+          if (user.changed('password')) {
+          }await user.setPassword(user.password);
         },
       }
     }
