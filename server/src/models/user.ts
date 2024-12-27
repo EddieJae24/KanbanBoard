@@ -39,15 +39,15 @@ export function UserFactory(sequelize: Sequelize): typeof User {
       password: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          notNull: {
-            msg: 'Please enter a password',
-          },
-          len: {
-            args:[8, 20],
-            msg: 'Password must be between 8 and 20 characters long',
-        },
-      },
+      //   validate: {
+      //     notNull: {
+      //       msg: 'Please enter a password',
+      //     },
+      //     len: {
+      //       args:[8, 20],
+      //       msg: 'Password must be between 8 and 20 characters long',
+      //   },
+      // },
     },
   },
     {

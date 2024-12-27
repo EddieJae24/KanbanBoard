@@ -9,12 +9,12 @@ export const login = async (req, res) => {
         res.status(401).send('Authentication failed');
         return;
     }
-    const validPassword = await bcrypt.compare(password, user.password);
-    if (!validPassword) {
+    const passwordIsValid = await bcrypt.compare(password, user.password);
+    if (!passwordIsValid) {
         res.status(401).send('Authentication failed');
         return;
     }
-    const secretKey = process.env.JWT_SECRET_KEY;
+    const secretKey = process.env.JWT_SECRET_KEY || '';
     const token = jwt.sign({ username }, secretKey, { expiresIn: '1h' });
     return res.json({ token });
     // TODO: If the user exists and the password is correct, return a JWT token
