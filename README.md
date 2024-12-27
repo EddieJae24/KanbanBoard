@@ -2,7 +2,7 @@
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  The application is designed to help teams and individuals manage tasks efficiently by organizing them into a Kanban-style board with columns representing different task statuses (e.g., "To Do," "In Progress," and "Completed"). The applacation is powered by a full stack NodeJs, REACT, and your classical frontend applaction. The page handles a secure login and uses Postgres database.
+  The application is designed to help teams and individuals manage tasks efficiently by organizing them into a Kanban-style board with columns representing different task statuses (e.g., "To Do," "In Progress," and "Completed"). The application is powered by a full stack NodeJs, REACT, and your classical frontend applaction. The page handles a secure login and uses Postgres database.
 
 
   ## Table of Contents
