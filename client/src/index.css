@@ -87,6 +87,9 @@ tbody tr:nth-child(odd) {
 /* Navbar Content */
 .nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
   padding: 1em 2em;
 }
 
@@ -100,18 +103,31 @@ tbody tr:nth-child(odd) {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: larger;
+  font-size: 2em;
+  
   font-weight: 900;
 }
 
 .nav-title a {
-  color: #b864c4;
+  color: #cf3be3;
+  padding: auto;
+  
 }
 
 .nav-item {
   display: block;
   margin-left: auto;
   list-style: none;
+  font-size: 1.5em;
+  background: linear-gradient(135deg, #6c63ff, #4826d4);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
 }
 
 .nav-link {
@@ -240,6 +256,7 @@ tbody tr:nth-child(odd) {
   width: 100%;
   align-items: center;
   justify-content: center;
+  font-size: 0.8em;
 }
 
 
@@ -249,9 +266,66 @@ tbody tr:nth-child(odd) {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #efeff6;
   }
   button {
     background-color: #f9f9f9;
   }
 }
+
+.container {
+  display: grid;
+  place-items: center;
+  justify-content: center; /* Horizontally center */
+    align-items: center;    /* Vertically center */
+    min-height: 70vh;      /* Full viewport height */
+    
+    }
+    
+    .container form {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      border-radius: 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #7680f0;
+      padding: 1rem;
+      position: relative;
+     
+  
+    }
+    
+    .container input, .contact textarea {
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: 1px solid rgb(146, 156, 208);
+      font-size: 1rem;
+    }
+    
+    .container button {
+      padding: 0.8rem;
+      background-color: #66bfbf;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .container button:hover {
+      background-color: #558f8f;
+    }
+    .container h1 {
+      font-size: 2rem;
+      font-family: 'Roboto', sans-serif;
+      margin-bottom: 1rem;
+    }
+  
+    .container label {
+      font-size: 1.2rem;
+      font-family: 'Roboto', sans-serif;
+      
+    }

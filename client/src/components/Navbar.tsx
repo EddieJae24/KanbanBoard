@@ -21,6 +21,7 @@ const Navbar = () => {
       <div className='nav-title'>
         <Link to='/'>Krazy Kanban Board</Link>
       </div>
+      <div>
       <ul>
       {
         !loginCheck ? (
@@ -38,6 +39,7 @@ const Navbar = () => {
         )
       }
       </ul>
+      </div>
     </div>
   )
 }

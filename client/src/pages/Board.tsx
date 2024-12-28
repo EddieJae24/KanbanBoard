@@ -6,6 +6,9 @@ import ErrorPage from './ErrorPage';
 import Swimlane from '../components/Swimlane';
 import { TicketData } from '../interfaces/TicketData';
 import { ApiMessage } from '../interfaces/ApiMessage';
+// 
+
+// 
 
 import auth from '../utils/auth';
 
@@ -14,7 +17,8 @@ const boardStates = ['Todo', 'In Progress', 'Done'];
 const Board = () => {
   const [tickets, setTickets] = useState<TicketData[]>([]);
   const [error, setError] = useState(false);
-  const [loginCheck, setLoginCheck] = useState(false);
+  const [loginCheck, setLoginCheck] = useState(false); 
+  
 
   const checkLogin = () => {
     if(auth.loggedIn()) {
@@ -41,6 +45,7 @@ const Board = () => {
       return Promise.reject(err);
     }
   }
+
 
   useLayoutEffect(() => {
     checkLogin();
@@ -80,6 +85,7 @@ const Board = () => {
                     tickets={filteredTickets} 
                     deleteTicket={deleteIndvTicket}
                   />
+            
                 );
               })}
             </div>
