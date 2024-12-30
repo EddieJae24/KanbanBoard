@@ -121,9 +121,10 @@ const Board = () => {
         </div>  
       ) : (
           <div className='board'>
-            <button type='button' id='create-ticket-link'>
-              <Link to='/create' >New Ticket</Link>
+            <button  type='button' id='create-ticket-link'>
+              <Link to='/create' className='newticket'>New Ticket</Link>
             </button>
+            
             <div className='filters'>
             <input
               type='text'
@@ -161,18 +162,20 @@ const Board = () => {
                     />
                   );
                 })
+
               : (() => {
                   const filteredTickets = sortAndFilterTickets(tickets).filter(
                     (ticket) => ticket.status === filters.status
                   );
                   return (
+                    <div>
                     <Swimlane
-                    
                       title={filters.status}
                       key={filters.status}
                       tickets={filteredTickets}
                       deleteTicket={deleteIndvTicket}
                     />
+                    </div>
                   );
                 })()}
           </div>

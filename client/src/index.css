@@ -140,13 +140,15 @@ tbody tr:nth-child(odd) {
 }
 
 .table {
-  width: 80vw;
+  /* width: 80vw; */
   table-layout: fixed;
 }
 
 .board {
   width: 100%;
 }
+
+
 
 .board-display {
   /* display: flex;
@@ -344,6 +346,7 @@ tbody tr:nth-child(odd) {
       display: flex;
       gap: 1rem;
       margin-bottom: 1rem;
+      margin-top: 1rem;
     }
     
     .filters input,
@@ -352,4 +355,4 @@ tbody tr:nth-child(odd) {
       font-size: 1rem;
     }
    
-    
+   
