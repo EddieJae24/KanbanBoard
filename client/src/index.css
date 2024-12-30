@@ -329,3 +329,17 @@ tbody tr:nth-child(odd) {
       font-family: 'Roboto', sans-serif;
       
     }
+
+    .filters {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .filters input,
+    .filters select {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+   
+    
